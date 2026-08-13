@@ -13,12 +13,20 @@ module "eks" {
     "scheduler"
   ]
 
+  cluster_addons = {
+    aws-ebs-csi-driver = {
+      most_recent = true
+
+      service_account_role_arn = aws_iam_role.ebs_csi.arn
+    }
+  }
+
   cluster_endpoint_public_access = true
 
-  create_cloudwatch_log_group =true
+  create_cloudwatch_log_group = true
 
   cloudwatch_log_group_retention_in_days = 30
-  
+
   vpc_id     = module.vpc.vpc_id
   subnet_ids = module.vpc.private_subnets
 
