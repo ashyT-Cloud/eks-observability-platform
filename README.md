@@ -8,6 +8,8 @@ The platform provides centralized **metrics, logs, dashboards, alerting, and per
 
 ## Architecture
 
+![EKS Observability Platform Architecture](docs/architecture/eks-observability-architecture.png)
+
 ```text
                          AWS
                           │
