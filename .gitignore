@@ -2,44 +2,17 @@
 .terraform/
 *.tfstate
 *.tfstate.*
+*.tfplan
+terraform.tfvars
+*.tfvars
+!*.tfvars.example
+
+# Terraform crash logs
 crash.log
 crash.*.log
-*.tfvars
-*.tfvars.json
-override.tf
-override.tf.json
-*_override.tf
-*_override.tf.json
 
-# Terraform sensitive files
-.terraform.lock.hcl
+# Helm temporary/rendered files
+*.rendered.yaml
 
-# Kubernetes / Helm
-*.secret.yaml
-*.secret.yml
-
-# Environment files
-.env
-.env.*
-!.env.example
-
-# OS files
-.DS_Store
-Thumbs.db
-desktop.ini
-
-# IDE
-.vscode/
-.idea/
-
-# Logs
-*.log
-
-# Temporary files
-*.tmp
-*.temp
-
-# Local credentials
-credentials
-credentials.json
-.aws/
+# Local temporary files
+/tmp/
